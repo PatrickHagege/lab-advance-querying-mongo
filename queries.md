@@ -47,15 +47,18 @@
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-<!-- Your Code Goes Here -->
+# query: `{ $and: [ { number_of_employees : { $gt: 100 },{ number_of_employees: { $lt: 1000 } } }] }`
+# projection: `{ name : 1 , number_of_employees : 1}`
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-<!-- Your Code Goes Here -->
+# sort: `{"ipo.valuation_amount":-1}`
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
 <!-- Your Code Goes Here -->
+# sort:`{ number_of_employees : -1}`
+# limit:`10`
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
