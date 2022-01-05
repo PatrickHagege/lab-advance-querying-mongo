@@ -74,7 +74,9 @@
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
-<!-- Your Code Goes Here -->
+# query: `{ founded_year: { $ne: null } }`
+# projection: `{ name : 1 , founded_year : 1}`
+# sort: `{founded_year:1}`
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
